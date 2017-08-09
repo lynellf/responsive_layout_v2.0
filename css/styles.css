@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #fff;
+  background-color: #FAFAFA;
 }
 
 /*layout*/
@@ -16,7 +17,6 @@ body {
 nav, header, footer {
   display: flex;
   flex-direction: column;
-  background-color: #FAFAFA;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
@@ -111,5 +111,27 @@ main {
     max-width: 50%;
   }
 
+@media (min-width: 1024px) {
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: inline-flex;
+    align-self: flex-end;
+  }
+
+  .name {
+    display: inline-flex;
+    align-self: flex-start;
+  }
+
+  .list-item {
+    max-width: 33.33%;
+  }
+
+}
 
 }
