@@ -1,5 +1,7 @@
 /*base styles*/
 
+@import url('https://fonts.googleapis.com/css?family=Cabin|Pacifico');
+
 * {
   box-sizing: border-box;
   line-height: 1.5em;
@@ -8,8 +10,10 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
   background-color: #FAFAFA;
+  background-color: #FAFAFA;
+  margin: 0;
+  font-size: 0.95em;
 }
 
 /*layout*/
@@ -22,6 +26,7 @@ nav, header, footer {
 }
 
 .name {
+  font-family: 'Pacifico', cursive;
   align-self: center;
 }
 
@@ -33,25 +38,51 @@ ul {
 }
 
 li {
+font-family: 'Cabin', sans-serif;
 background-color: #FFF;
-margin-bottom: 0.8em;
+margin-bottom: 0.3em;
+padding: 0.5em;
 }
 
-header, footer p {
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+header, footer p, .list-item p {
+font-family: 'Cabin', sans-serif;
 text-align: center;
 align-self: center;
+max-width: 85%;
 }
 
 main {
+  font-family: 'Cabin', sans-serif;
   display: flex;
   flex-direction: column;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  background-color: #fff;
+  padding-top: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.main-title {
+  padding: 1em;
 }
 
 .list-item, .description {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.titles {
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 0px;
 }
 
 .portfolio-image {
@@ -61,7 +92,8 @@ main {
   margin: auto;
 }
 
-.titles, div.description p {
+.main-title, .titles, div.description p, .end-title {
+  font-family: 'Cabin', sans-serif;
   text-align: center;
 }
 
@@ -71,11 +103,22 @@ main {
   align-self: center;
 }
 
+.end-title {
+  /*padding-top: 1em;*/
+  /*padding-bottom: 1em;*/
+}
+
 .end {
+  font-family: 'Cabin', sans-serif;
   border-top: 1px solid grey;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.end-nav {
+  font-family: 'Cabin', sans-serif;
+  display: none;
 }
 
 /*media queries*/
@@ -101,6 +144,10 @@ main {
     flex-direction: row-reverse;
   }
 
+  main {
+    margin: 2em;
+  }
+
   .portfolio {
     display: flex;
     flex-direction: row;
@@ -109,6 +156,11 @@ main {
 
   .list-item {
     max-width: 50%;
+    margin: -0.6em;
+  }
+
+  .small-redirect {
+    display: none;
   }
 
 @media (min-width: 1024px) {
