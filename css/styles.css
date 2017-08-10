@@ -13,7 +13,6 @@ body {
   background-color: #FAFAFA;
   background-color: #FAFAFA;
   margin: 0;
-  font-size: 0.95em;
 }
 
 /*layout*/
@@ -53,11 +52,15 @@ a:visited {
   color: inherit;
 }
 
+header p {
+  align-self: center;
+  width: 89%;
+}
+
 header, footer p, .list-item p {
 font-family: 'Cabin', sans-serif;
 text-align: center;
 align-self: center;
-max-width: 85%;
 }
 
 main {
@@ -80,6 +83,10 @@ main {
   margin-bottom: 1em;
 }
 
+.description p {
+  width: 80%;
+}
+
 .titles {
   font-family: 'Cabin', sans-serif;
   margin-bottom: 0px;
@@ -99,13 +106,7 @@ main {
 
 .gallery {
   max-width: 90%;
-  max-height: 90%;
   align-self: center;
-}
-
-.end-title {
-  /*padding-top: 1em;*/
-  /*padding-bottom: 1em;*/
 }
 
 .end {
@@ -114,11 +115,35 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.contact p {
+  font-size: 1.2em;
+}
+
+.closing-statement {
+  max-width: 89%;
+}
+
+.contact-info {
+  align-self: center;
 }
 
 .end-nav {
   font-family: 'Cabin', sans-serif;
   display: none;
+}
+
+.small-redirect a {
+  font-size: 0.8em;
 }
 
 /*media queries*/
@@ -130,38 +155,84 @@ main {
     flex-wrap: wrap;
   }
 
-  ul {
+  nav ul {
     display: inline-flex;
     align-self: center;
+    font-size: 0.80em;
   }
 
-  li {
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+  nav li {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
   header {
     flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  header p {
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    padding-bottom: 6em;
+  }
+
+  .portfolio-image {
+    margin-top: 2em;
+    max-width: 40%;
+    margin-right: 1em;
   }
 
   main {
-    margin: 2em;
+    margin-top: 0;
   }
 
   .portfolio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .closing-statement {
+    max-width: 65%;
   }
 
   .list-item {
     max-width: 50%;
-    margin: -0.6em;
+  }
+
+  .odd {
+    padding-left: 1em;
+  }
+
+  .even {
+    padding-right: 1em;
+  }
+
+  .gallery {
+    max-width: 97%;
+    align-self: center;
   }
 
   .small-redirect {
     display: none;
   }
+
+  .end-nav {
+    display: flex;
+    font-size: 0.85em;
+    width: 100%;
+  }
+
+  .end-name {
+    align-self: flex-start;
+  }
+
 
 @media (min-width: 1024px) {
 
