@@ -155,13 +155,23 @@ main {
     flex-wrap: wrap;
   }
 
-  nav ul {
-    display: inline-flex;
-    align-self: center;
-    font-size: 0.80em;
+  li {
+  background-color: #FAFAFA;
   }
 
-  nav li {
+  .top-nav {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-size: 0.80em;
+    margin-top: 2em;
+  }
+
+  .top-nav-group {
+    display: flex;
+  }
+
+  .top-nav-group li {
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -225,6 +235,7 @@ main {
 
   .end-nav {
     display: flex;
+    justify-content: space-between;
     font-size: 0.85em;
     width: 100%;
   }
@@ -233,21 +244,23 @@ main {
     align-self: flex-start;
   }
 
+  .end-nav-group {
+    align-self: flex-end;
+    display: flex;
+  }
 
 @media (min-width: 1024px) {
 
-  nav {
+  .top-nav {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  ul {
-    display: inline-flex;
-    align-self: flex-end;
+  .top-nav-group {
+    display: flex;
   }
 
-  .name {
-    display: inline-flex;
+  .top-name {
     align-self: flex-start;
   }
 
