@@ -7,12 +7,18 @@
   line-height: 1.5em;
 }
 
+html {
+  display: flex;
+}
+
 body {
   display: flex;
   flex-direction: column;
   background-color: #FAFAFA;
   background-color: #FAFAFA;
-  margin: 0;
+  margin: auto;
+  max-width: 1024px;
+  align-self: center;
 }
 
 /*layout*/
@@ -254,18 +260,42 @@ main {
   .top-nav {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .top-nav-group {
-    display: flex;
+    width: 100%;
   }
 
   .top-name {
+    text-align: left;
+    display: inline-block;
     align-self: flex-start;
   }
 
+  .top-nav-group {
+    align-self: flex-end;
+    display: flex;
+  }
+
+  header p {
+    width: 50%;
+  }
+
+  .portfolio-image {
+
+  }
+
   .list-item {
-    max-width: 33.33%;
+    max-width: 33%;
+  }
+
+  .odd {
+    padding-left: 0;
+  }
+
+  .even {
+    padding-right: 0;
+  }
+
+  .closing-statement {
+    max-width: 47%;
   }
 
 }
