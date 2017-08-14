@@ -9,19 +9,32 @@
 
 html {
   display: flex;
+  background-color: #2A2C05;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  background-color: #FAFAFA;
-  background-color: #FAFAFA;
+  background-color: #E4B04A;
   margin: auto;
   max-width: 1024px;
   align-self: center;
 }
 
 /*layout*/
+
+img {
+  border: 2px solid #2A2C05;
+}
+
+.gallery {
+  opacity: 0.4;
+  transition: 0.4s;
+}
+
+.gallery:hover {
+  opacity: 1;
+}
 
 nav, header, footer {
   display: flex;
@@ -30,32 +43,37 @@ nav, header, footer {
   padding-right: 0.5em;
 }
 
-.name {
-  font-family: 'Pacifico', cursive;
-  align-self: center;
-}
-
-ul {
+.top-nav {
   padding-left: 0;
   margin-top: 0;
   text-align: center;
   list-style-type: none;
 }
 
-li {
-font-family: 'Cabin', sans-serif;
-background-color: #FFF;
-margin-bottom: 0.3em;
-padding: 0.5em;
+.top-nav-list {
+  font-family: 'Cabin', sans-serif;
+  background-color: #EFE0B9;
+  margin-bottom: 0.3em;
+  padding: 0.5em;
+}
+
+.top-nav-list:hover {
+  background-color: #B7521E;
+}
+
+.top-name {
+  background-color: #E4B04A;
+  font-family: 'Pacifico', cursive;
+  align-self: center;
 }
 
 a {
   text-decoration: none;
 }
 
-a:visited {
+a:link, a:visited, a:active, a:hover {
   text-decoration: none;
-  color: inherit;
+  color: #2A2C05;
 }
 
 header p {
@@ -73,10 +91,48 @@ main {
   font-family: 'Cabin', sans-serif;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #EFE0B9;
   padding-top: 1em;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.skills {
+  display: flex;
+}
+
+.skills-list {
+  margin: auto;
+  display: flex;
+  padding-left: 0;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-between;
+  color: #FFF;
+}
+
+.skills-list li:nth-of-type(even) {
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  background-color: #643B0F;
+  border-radius: 10%;
+  box-shadow: 0 2px 2px 0 black;
+  margin: 0.3em;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.skills-list li:nth-of-type(odd) {
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  background-color: #B7521E;
+  border-radius: 10%;
+  box-shadow: 0 2px 2px 0 black;
+  margin: 0.3em;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .main-title {
@@ -115,16 +171,6 @@ main {
   align-self: center;
 }
 
-.end {
-  font-family: 'Cabin', sans-serif;
-  border-top: 1px solid grey;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
 .contact {
   display: flex;
   flex-direction: column;
@@ -143,13 +189,40 @@ main {
   align-self: center;
 }
 
+.end {
+  font-family: 'Cabin', sans-serif;
+  border-top: 1px solid #2A2C05;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-bottom: 2em;
+}
+
 .end-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 0;
+  margin-top: 1em;
+  text-align: center;
+  list-style-type: none;
+}
+
+.end-name {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.end-nav-toggle {
   font-family: 'Cabin', sans-serif;
   display: none;
 }
 
 .small-redirect a {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 /*media queries*/
@@ -158,33 +231,44 @@ main {
 
   nav, footer {
     flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  li {
-  background-color: #FAFAFA;
   }
 
   .top-nav {
     display: flex;
-    flex-direction: column;
-    align-self: center;
-    font-size: 0.80em;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    width: 100%;
     margin-top: 2em;
   }
 
-  .top-nav-group {
-    display: flex;
+  h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
   }
 
-  .top-nav-group li {
-    margin-left: 1em;
-    margin-right: 1em;
+  .top-nav-list {
+    background-color: #E4B04A;
+  }
+
+  .top-nav-list:hover {
+    background-color: #E4B04A;
+  }
+
+  .top-name {
+    margin-right: auto;
+  }
+
+  .top-nav li {
+    padding: 5px 10px 10px 10px;
   }
 
   header {
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3em;
   }
 
   header p {
@@ -192,8 +276,7 @@ main {
     text-align: left;
     margin-left: 1em;
     margin-right: 1em;
-    margin-top: 2em;
-    padding-bottom: 6em;
+    margin-top: -1.5em;
   }
 
   .portfolio-image {
@@ -206,12 +289,15 @@ main {
     margin-top: 0;
   }
 
+  .skills-list {
+    flex-direction: row;
+  }
+
   .portfolio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 100%;
   }
 
   .closing-statement {
@@ -235,69 +321,70 @@ main {
     align-self: center;
   }
 
-  .small-redirect {
-    display: none;
-  }
-
   .end-nav {
     display: flex;
     justify-content: space-between;
-    font-size: 0.85em;
+    align-items: center;
+    font-size: 0.9em;
     width: 100%;
   }
 
-  .end-name {
-    align-self: flex-start;
+  .end-nav-toggle {
+    display: block;
   }
 
-  .end-nav-group {
-    align-self: flex-end;
-    display: flex;
+  .end-nav li {
+    padding: 5px 10px 10px 10px;
   }
 
-@media (min-width: 1024px) {
-
-  .top-nav {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+  .small-redirect {
+    display: none;
   }
-
-  .top-name {
-    text-align: left;
-    display: inline-block;
-    align-self: flex-start;
-  }
-
-  .top-nav-group {
-    align-self: flex-end;
-    display: flex;
-  }
-
-  header p {
-    width: 50%;
-  }
-
-  .portfolio-image {
-
-  }
-
-  .list-item {
-    max-width: 33%;
-  }
-
-  .odd {
-    padding-left: 0;
-  }
-
-  .even {
-    padding-right: 0;
-  }
-
-  .closing-statement {
-    max-width: 47%;
-  }
-
 }
 
-}
+  @media (min-width: 1024px) {
+
+    nav, header p,
+    .portfolio-image, .portfolio,
+    .contact, .end {
+      margin-left: 2em;
+      margin-right: 2em;
+    }
+
+    .top-nav {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .top-name {
+      text-align: left;
+      display: inline-block;
+      align-self: flex-start;
+    }
+
+    .top-nav li {
+      align-self: flex-end;
+      display: flex;
+    }
+
+    header p {
+      width: 50%;
+    }
+
+    .list-item {
+      max-width: 33%;
+    }
+
+    .odd {
+      padding-left: 0;
+    }
+
+    .even {
+      padding-right: 0;
+    }
+
+    .closing-statement {
+      max-width: 47%;
+    }
+  }

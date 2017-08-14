@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" name=viewport content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
     <title>Jane Foster</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+    <nav>
     <ul class="top-nav">
       <li class="top-name"><h1 class="name" id="home">Jane Foster</h1></li>
-      <div class="top-nav-group">
-        <a href="#contact"><li>HOME</li></a>
-        <a href="#contact"><li>PORTFOLIO</li></a>
-        <a href="#contact"><li>CONTACT</li></a>
-      </div> <!-- End Navigation List -->
+      <li class="top-nav-list"><strong><a href="#home">HOME</a></strong></li>
+      <li class="top-nav-list"><strong><a href="#skills">SKILLS</a></strong></li>
+      <li class="top-nav-list"><strong><a href="#portfolio">PORTFOLIO</a></strong></li>
+      <li class="top-nav-list"><strong><a href="#contact">CONTACT</a></strong></li>
     </ul>
     </nav>
 
@@ -26,8 +27,20 @@
     </header>
 
     <main>
-      <h4 class="main-title">PORTFOLIO</h4>
-      <div class="portfolio" id="portfolio">
+
+      <h4 class="main-title" id="skills">SKILLS</h4>
+      <div class="skills">
+        <ul class="skills-list">
+          <li>HTML5 / CSS3</li>
+          <li>JavaScript /&nbsp;jQuery</li>
+          <li>Version Control</li>
+          <li>Responsive Layout and Design</li>
+          <li>Cross-Browser Compatibility</li>
+          <li>Mobile First Thinking</li></ul>
+      </div>
+
+      <h4 class="main-title" id="portfolio">PORTFOLIO</h4>
+      <div class="portfolio">
         <div class="list-item odd">
           <img src="images/portfolio-1.png" alt="Marketing Page." class="gallery">
           <div class="description">
@@ -111,14 +124,13 @@
       </div> <!-- Contact Div -->
 
       <div class="end">
-        <p><strong class="small-redirect"><a href="#top">BACK TO TOP</a></strong></p>
         <ul class="end-nav">
           <li class="end-name"><strong>Jane Foster</strong></li>
-          <div class="end-nav-group">
-            <a href="#contact"><li>HOME</li></a>
-            <a href="#contact"><li>PORTFOLIO</li></a>
-            <a href="#contact"><li>CONTACT</li></a>
-          </div> <!-- End Navigation List -->
+          <li class="end-nav-toggle"><strong><a href="#top">HOME</a></strong></li>
+          <li class="end-nav-toggle"><strong><a href="#skills">SKILLS</a></strong></li>
+          <li class="end-nav-toggle"><strong><a href="#portfolio">PORTFOLIO</a></strong></li>
+          <li class="end-nav-toggle"><strong><a href="#contact">CONTACT</a></strong></li>
+          <li class="small-redirect"><strong><a href="#top">BACK TO TOP</a></strong></li>
         </ul>
       </div> <!-- End Div -->
 
