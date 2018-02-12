@@ -1,5 +1,6 @@
 # responsive_layout_v2.0 (Techdegree Project 2)
-Project Overview
+
+## Project Overview
 
 --------------------
 
